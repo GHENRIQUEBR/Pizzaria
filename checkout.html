@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar Pedido | Pizzaria Leila</title>
+
+    <link rel="stylesheet" href="checkout.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER FIXO -->
+    <header class="checkout-header">
+
+        <!-- LOGO (CLICÁVEL) -->
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">🍕</span>
+
+            <div class="logo-text">
+                <h1>Pizzaria Leila</h1>
+                <p>Sabor artesanal de verdade</p>
+            </div>
+
+        </a>
+
+        <!-- TEXTO DO CHECKOUT -->
+        <div class="header-info">
+            <h2>Finalizar Pedido</h2>
+            <p>Confira seu pedido e escolha o pagamento</p>
+        </div>
+
+    </header>
+
+    <!-- CONTEÚDO -->
+    <main class="checkout-container">
+
+        <!-- RESUMO DO PEDIDO -->
+        <section class="pedido-box">
+
+            <h2>🧾 Resumo do Pedido</h2>
+
+            <ul id="resumoPedido">
+                <li>Carregando itens...</li>
+            </ul>
+
+            <div class="total">
+                Total: <span id="totalPedido">R$ 0,00</span>
+            </div>
+
+        </section>
+
+        <!-- FORMAS DE PAGAMENTO -->
+        <section class="pagamento-box">
+
+            <h2>💳 Forma de Pagamento</h2>
+
+            <div class="pagamento-opcoes">
+
+                <label>
+                    <input type="radio" name="pagamento" value="pix" checked>
+                    💚 Pix
+                </label>
+
+                <label>
+                    <input type="radio" name="pagamento" value="dinheiro">
+                    💵 Dinheiro
+                </label>
+
+                <label>
+                    <input type="radio" name="pagamento" value="cartao">
+                    💳 Cartão
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- DADOS DO CLIENTE -->
+        <section class="form-box">
+
+            <h2>📍 Seus Dados</h2>
+
+            <form id="formPedido">
+
+                <input type="text" placeholder="Seu nome completo" required>
+
+                <input type="text" placeholder="Endereço" required>
+
+                <input type="text" placeholder="Bairro" required>
+
+                <input type="text" placeholder="Cidade" required>
+
+                <input type="tel" placeholder="WhatsApp" required>
+
+                <textarea placeholder="Observações do pedido (opcional)"></textarea>
+
+                <button type="submit">
+                    🚀 Finalizar Pedido
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="checkout.js"></script>
+
+    <!-- FOOTER -->
+    <footer class="checkout-footer">
+        <p>© 2026 Pizzaria Leila. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

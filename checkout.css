@@ -1,0 +1,358 @@
+/* =========================
+   BASE
+========================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f6f6f6;
+    color:#333;
+}
+
+/* =========================
+   HEADER
+========================= */
+.checkout-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 40px;
+
+    background:#d62828;
+    color:white;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* LOGO */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    text-decoration:none;
+    color:white;
+}
+
+.logo-icon{
+    font-size:30px;
+}
+
+.logo-text h1{
+    font-size:18px;
+    margin:0;
+}
+
+.logo-text p{
+    font-size:12px;
+    opacity:0.85;
+}
+
+/* TITULO HEADER */
+.header-info{
+    text-align:right;
+}
+
+.header-info h2{
+    font-size:20px;
+}
+
+.header-info p{
+    font-size:12px;
+    opacity:0.8;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.checkout-container{
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* =========================
+   BOXES
+========================= */
+.pedido-box,
+.pagamento-box,
+.form-box{
+    background:white;
+
+    padding:22px;
+
+    border-radius:16px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* TITULOS */
+.pedido-box h2,
+.pagamento-box h2,
+.form-box h2{
+    margin-bottom:15px;
+    color:#d62828;
+}
+
+/* =========================
+   LISTA DO CARRINHO (NÍVEL APP)
+========================= */
+#resumoPedido{
+    list-style:none;
+}
+
+/* CARD DO ITEM */
+#resumoPedido li{
+    background:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:15px;
+
+    transition:0.2s;
+
+    animation:pop 0.2s ease;
+}
+
+#resumoPedido li:hover{
+    transform:translateY(-2px);
+}
+
+/* TEXTO ITEM */
+#resumoPedido li strong{
+    font-size:15px;
+    display:block;
+}
+
+#resumoPedido li small{
+    font-size:12px;
+    color:#666;
+}
+
+/* =========================
+   CONTROLES (+ - REMOVER)
+========================= */
+.item-controle{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.item-controle span{
+    min-width:25px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* BOTÕES + - */
+.item-controle button{
+    width:32px;
+    height:32px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#d62828;
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.15s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.item-controle button:hover{
+    background:#b71c1c;
+}
+
+.item-controle button:active{
+    transform:scale(0.9);
+}
+
+/* BOTÃO REMOVER */
+.item-controle .remover{
+    background:#333;
+    width:auto;
+    padding:0 10px;
+    font-size:14px;
+}
+
+.item-controle .remover:hover{
+    background:#000;
+}
+
+/* =========================
+   TOTAL (FIXO PREMIUM)
+========================= */
+.total{
+    margin-top:15px;
+
+    font-size:22px;
+    font-weight:800;
+
+    color:#d62828;
+
+    text-align:right;
+
+    position:sticky;
+    bottom:0;
+
+    background:linear-gradient(135deg,#fff,#f9f9f9);
+
+    padding:18px;
+
+    border-top:1px solid #eee;
+
+    box-shadow:0 -10px 25px rgba(0,0,0,0.05);
+
+    border-radius:12px 12px 0 0;
+}
+
+/* =========================
+   PAGAMENTO
+========================= */
+.pagamento-opcoes{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.pagamento-opcoes label{
+    background:#f8f8f8;
+    padding:10px 15px;
+    border-radius:10px;
+
+    cursor:pointer;
+
+    border:1px solid #eee;
+
+    transition:0.2s;
+}
+
+.pagamento-opcoes label:hover{
+    border-color:#d62828;
+}
+
+/* =========================
+   FORM
+========================= */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input, textarea{
+    padding:12px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    outline:none;
+    transition:0.2s;
+}
+
+input:focus, textarea:focus{
+    border-color:#d62828;
+}
+
+/* BOTÃO FINALIZAR */
+button[type="submit"]{
+    background:#25d366;
+    color:white;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+button[type="submit"]:hover{
+    background:#1ebe5d;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.checkout-footer{
+    text-align:center;
+
+    padding:20px;
+
+    font-size:13px;
+
+    color:#777;
+}
+
+/* =========================
+   ANIMAÇÃO
+========================= */
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(0.98);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width:768px){
+
+    .checkout-header{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .header-info{
+        text-align:center;
+    }
+
+    #resumoPedido li{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .total{
+        text-align:left;
+    }
+}

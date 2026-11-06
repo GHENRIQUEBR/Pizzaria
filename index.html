@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pizzaria Leila | Pizza Artesanal Premium</title>
+
+    <meta
+        name="description"
+        content="Pizzaria Leila - As melhores pizzas artesanais da cidade. Peça agora pelo WhatsApp."
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- ICONS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+</head>
+
+<body>
+
+    <!-- =========================
+         WHATSAPP FLUTUANTE
+    ========================== -->
+    <a
+        class="whatsapp-float"
+        href="https://wa.me/5500000000000"
+        target="_blank"
+        aria-label="Falar no WhatsApp"
+    >
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="header">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <h1>🍕 Pizzaria Leila</h1>
+            <p>Sabor artesanal de verdade</p>
+
+        </div>
+
+        <!-- NAV -->
+        <nav class="nav">
+
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#promocoes">Promoções</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+        <!-- CARRINHO -->
+        <div class="cart-icon" onclick="abrirCarrinho()">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <span class="contador">0</span>
+
+        </div>
+
+    </header>
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+    <main>
+
+        <!-- =========================
+             HERO / BANNER
+        ========================== -->
+        <section class="banner" id="inicio">
+
+            <div class="banner-content">
+
+                <span class="tag">
+                    🔥 Pizza Artesanal Premium
+                </span>
+
+                <h2>
+                    A melhor pizza da cidade direto na sua casa
+                </h2>
+
+                <p>
+                    Ingredientes selecionados, massa artesanal
+                    e sabores incríveis preparados especialmente para você.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#cardapio" class="btn-banner">
+                        Ver Cardápio
+                    </a>
+
+                    <a
+                        href="https://wa.me/5500000000000"
+                        target="_blank"
+                        class="btn-whatsapp"
+                    >
+                        Pedir Agora
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             PROMOÇÕES
+        ========================== -->
+        <section class="promocoes" id="promocoes">
+
+            <h2>🔥 Promoções Especiais</h2>
+
+            <div class="cards-container">
+
+                <!-- PROMO 1 -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200"
+                        alt="Combo Família"
+                    >
+
+                    <h3>🍕 Combo Família</h3>
+
+                    <p>
+                        2 pizzas grandes + refrigerante 2L.
+                    </p>
+
+                    <strong>R$ 79,90</strong>
+
+                </article>
+
+                <!-- PROMO 2 -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=1200"
+                        alt="Oferta do Dia"
+                    >
+
+                    <h3>🔥 Oferta do Dia</h3>
+
+                    <p>
+                        Pizza Pepperoni + borda recheada.
+                    </p>
+
+                    <strong>R$ 39,90</strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             CARDÁPIO
+        ========================== -->
+        <section class="cardapio" id="cardapio">
+
+            <h2>🍕 Nosso Cardápio</h2>
+
+            <p>
+                Escolha entre nossas deliciosas opções artesanais.
+            </p>
+
+            <div class="cards-container">
+
+                <!-- CARD -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200"
+                        alt="Pizza Portuguesa"
+                        loading="lazy"
+                    >
+
+                    <h3>🍕 Portuguesa</h3>
+
+                    <p>
+                        Molho artesanal, mussarela,
+                        presunto, ovos e azeitonas.
+                    </p>
+                        <div class="pizza-footer">
+
+                    <strong>R$ 30,00</strong>
+                    <button class="btn-comprar" data-nome="Pizza Portuguesa" data-preco="30,00">
+                         <i class="fa-solid fa-cart-plus"></i>Comprar</button>
+                        </div>
+                </article>
+
+                <!-- CARD -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=1200"
+                        alt="Pizza Catupiry"
+                        loading="lazy"
+                    >
+
+                    <h3>🧀 Catupiry Especial</h3>
+
+                    <p>
+                        Mussarela premium e catupiry cremoso.
+                    </p>
+                     <div class="pizza-footer">
+
+                    <strong>R$ 25,00</strong>
+                    <button class="btn-comprar" data-nome="Pizza Catupiry" data-preco="25,00">
+                         <i class="fa-solid fa-cart-plus"></i>Comprar</button>
+                         </div>
+
+                </article>
+
+                <!-- CARD -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=1200"
+                        alt="Pizza Margherita"
+                        loading="lazy"
+                    >
+
+                    <h3>🌿 Margherita</h3>
+
+                    <p>
+                        Mussarela fresca, tomate italiano
+                        e manjericão.
+                    </p>
+                     <div class="pizza-footer">
+
+                    <strong>R$ 22,00</strong>
+                    <button class="btn-comprar" data-nome="Pizza Margherita" data-preco="22,00">
+                         <i class="fa-solid fa-cart-plus"></i>Comprar</button>
+                         </div>
+
+                </article>
+
+                <!-- CARD -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1200"
+                        alt="Pizza Quatro Queijos"
+                        loading="lazy"
+                    >
+
+                    <h3>🧀 Quatro Queijos</h3>
+
+                    <p>
+                        Mussarela, parmesão,
+                        provolone e gorgonzola.
+                    </p>
+                    <div class="pizza-footer">
+
+                    <strong>R$ 28,00</strong>
+                    <button class="btn-comprar" data-nome="Pizza Quatro Queijos" data-preco="28,00">
+                         <i class="fa-solid fa-cart-plus"></i>Comprar</button>
+                    </div>
+
+                </article>
+
+                <!-- CARD -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=1200"
+                        alt="Pizza Pepperoni"
+                        loading="lazy"
+                    >
+
+                    <h3>🌶️ Pepperoni</h3>
+
+                    <p>
+                        Pepperoni premium e queijo especial.
+                    </p>
+
+                    <div class="pizza-footer">
+                        <strong>R$ 29,00</strong>
+                        <button class="btn-comprar" data-nome="Pizza Pepperoni" data-preco="29,00">
+                            <i class="fa-solid fa-cart-plus"></i>Comprar</button>
+                    </div>
+
+                </article>
+
+                <!-- CARD -->
+                <article class="pizza-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=1476"
+                        alt="Pizza Calabresa"
+                        loading="lazy"
+                    >
+
+                    <h3>🔥 Calabresa</h3>
+
+                    <p>
+                        Calabresa defumada,
+                        cebola roxa e mussarela.
+                    </p>
+
+                    <div class="pizza-footer">
+                        <strong>R$ 24,00</strong>
+                        <button class="btn-comprar" data-nome="Pizza Calabresa" data-preco="24,00">
+                            <i class="fa-solid fa-cart-plus"></i>Comprar</button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+        <section class="sobre" id="sobre">
+
+            <h2>👨‍🍳 Sobre Nós</h2>
+
+            <p>
+                A Pizzaria Leila nasceu com a missão
+                de oferecer uma experiência premium em pizzas artesanais.
+            </p>
+
+            <p>
+                Trabalhamos com ingredientes selecionados,
+                receitas especiais e muito carinho em cada pedido.
+            </p>
+
+        </section>
+
+        <!-- =========================
+             DEPOIMENTOS
+        ========================== -->
+        <section class="depoimentos">
+
+            <h2>⭐ O que nossos clientes dizem</h2>
+
+            <div class="cards-container">
+
+                <!-- CLIENTE -->
+                <article class="pizza-card">
+
+                    <h3>⭐⭐⭐⭐⭐</h3>
+
+                    <p>
+                        "A melhor pizza que já comi.
+                        Massa perfeita e entrega rápida!"
+                    </p>
+
+                    <strong>— Carlos Silva</strong>
+
+                </article>
+
+                <!-- CLIENTE -->
+                <article class="pizza-card">
+
+                    <h3>⭐⭐⭐⭐⭐</h3>
+
+                    <p>
+                        "Atendimento incrível e sabor surreal.
+                        Recomendo demais!"
+                    </p>
+
+                    <strong>— Mariana Costa</strong>
+
+                </article>
+
+                <!-- CLIENTE -->
+                <article class="pizza-card">
+
+                    <h3>⭐⭐⭐⭐⭐</h3>
+
+                    <p>
+                        "Virou minha pizzaria favorita.
+                        Qualidade absurda!"
+                    </p>
+
+                    <strong>— João Pedro</strong>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             CONTATO
+        ========================== -->
+        <section class="pedido" id="contato">
+
+            <h2>📲 Faça seu Pedido</h2>
+
+            <p>
+                Clique no botão abaixo e peça agora pelo WhatsApp.
+            </p>
+
+            <a
+                class="btn-whatsapp"
+                href="https://wa.me/5500000000000"
+                target="_blank"
+            >
+                Pedir no WhatsApp
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+
+        <p>
+            © 2026 Pizzaria Leila • Todos os direitos reservados
+        </p>
+
+    </footer>
+<script src="script.js"></script>
+<!-- CARRINHO LATERAL -->
+<div id="carrinhoLateral" class="carrinho-lateral">
+
+    <div class="carrinho-topo">
+
+        <h2>🛒 Seu Carrinho</h2>
+
+        <button class="fechar-carrinho" onclick="fecharCarrinho()">
+            ✕
+        </button>
+
+    </div>
+
+    <ul id="listaCarrinho"></ul>
+
+    <div class="carrinho-footer">
+
+        <h3 id="totalCarrinho">
+            Total: R$ 0,00
+        </h3>
+<a class="btn-finalizar" onclick="irParaCheckout()"target="_blank"noreferrer>
+    Finalizar Pedido
+</a>
+
+    </div>
+
+</div>
+</body>
+
+</html>
